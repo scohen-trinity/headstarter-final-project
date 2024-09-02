@@ -7,6 +7,9 @@ import BottomNavbar from '../Shared/BottomNavbar/BottomNavbar';
 import 'boxicons'
 
 function Home() {
+
+  const matches = getUsers(this.school);
+
   const [currentIndex, setCurrentIndex] = useState(0);
     
   const matchProfile = () => {
