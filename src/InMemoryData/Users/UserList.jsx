@@ -1,28 +1,32 @@
-const profiles = [
-    { 
+const users = [
+    {
         name: 'Sam',
         budget: 800,
+        school: 'Trinity University',
         lifestyle: 'party',
-        location: 'San Antonio',
+        residencyType: 'Apartment',
     },
     {
         name: 'Praneet',
         budget: 1000,
+        school: 'UT Dallas',
         lifestyle: 'homebody',
-        location: 'Dallas',
+        residencyType: 'Dorm',
     },
     {
         name: 'Bob',
         budget: 950,
+        school: 'UT Dallas',
         lifestyle: 'mostly homebody',
-        location: 'Dallas',
+        residencyType: 'Dorm',
     },
     {
         name: 'Joe',
         budget: 1200,
+        school: 'Trinity University',
         lifestyle: 'sometimes party',
-        location: 'San Antonio',
+        residencyType: 'Apartment',
     },
 ]
 
-export default profiles
+export default users

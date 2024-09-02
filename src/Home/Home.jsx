@@ -1,5 +1,5 @@
 import './Home.css'
-import profiles from '../InMemoryData/Users/Profiles';
+import users from '../InMemoryData/Users/UserList';
 import { useState } from 'react';
 
 function Home() {
@@ -14,7 +14,7 @@ function Home() {
   }
 
   const moveToNextProfile = () => {
-    currentIndex < profiles.length - 1 ? setCurrentIndex(currentIndex + 1) : setCurrentIndex(0);
+    currentIndex < users.length - 1 ? setCurrentIndex(currentIndex + 1) : setCurrentIndex(0);
   }
 
   return (
@@ -23,11 +23,12 @@ function Home() {
         <h1>Home Page</h1>
       </div>
       <div className='profile-card'>
-        <h2>{profiles[currentIndex].name}</h2>
+        <h2>{users[currentIndex].name}</h2>
         <div className='flags'>
-            <p>{profiles[currentIndex].budget}</p>
-            <p>{profiles[currentIndex].lifestyle}</p>
-            <p>{profiles[currentIndex].location}</p>
+            <p>{users[currentIndex].budget}</p>
+            <p>{users[currentIndex].lifestyle}</p>
+            <p>{users[currentIndex].school}</p>
+            <p>{users[currentIndex].residencyType}</p>
         </div>
         <div className='swipe-bar'>
             <p className='match'><button onClick={removeProfile}>no</button></p>
