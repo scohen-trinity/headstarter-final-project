@@ -6,11 +6,15 @@
     align-items: center;
 }
 
+.name-tag {
+    padding: 0 2rem;
+}
+
 .profile-card {
-    width: 60%;
-    height: 60%;
-    background-color: blue;
+    border: 2px solid #2A2D34;
+    min-width: 20rem;
     border-radius: 10px;
+    background-color: #30C5FF;
 }
 
 .swipe-bar {
@@ -18,4 +22,23 @@
     padding: 0 2rem;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.tag {
+    border: 1.5px solid #2A2D34;
+    display: flex;
+    padding: 0.2rem 0.5rem;
+    align-items: center;
+    border-radius: 1.5rem;
+    justify-content: center;
+    background-color: #5C946E;
+}
+
+.tags {
+    gap: 10px;
+    width: 30rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
