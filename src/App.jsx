@@ -10,17 +10,15 @@ import './App.css'
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Landing />}></Route>
-          <Route path='/chat' element={<Chat />}></Route>
-          <Route path='/home' element={<Home />}></Route>
-          <Route path='/login' element={<Login />}></Route>
-          <Route path='/profile' element={<Profile />}></Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Landing />}></Route>
+        <Route path='/chat' element={<Chat />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/profile' element={<Profile />}></Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
