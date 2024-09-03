@@ -2,8 +2,8 @@
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 
 .name-tag {
@@ -22,6 +22,10 @@
     padding: 0 2rem;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.swipe-bar p:hover {
+    cursor: pointer;
 }
 
 .tag {

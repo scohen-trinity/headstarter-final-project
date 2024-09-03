@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import './Home.css'
 import users from '../InMemoryData/Users/UserList';
+import BottomNavbar from '../Shared/BottomNavbar/BottomNavbar';
 
 import 'boxicons'
 
@@ -21,23 +22,26 @@ function Home() {
   }
 
   return (
-    <div className='home-wrapper'>
-      <div>
-        <h1>Discover Page</h1>
-      </div>
-      <div className='profile-card'>
-        <h2 className='name-tag'>{users[currentIndex].name}</h2>
-        <div className='tags'>
-            <p className='tag'>{users[currentIndex].school}</p>
-            <p className='tag'>${users[currentIndex].budget}</p>
-            <p className='tag'>{users[currentIndex].residencyType}</p>
-            <p className='tag'>{users[currentIndex].lifestyle}</p>
+    <div>
+      <div className='home-wrapper'>
+        <div>
+          <h1>Discover Page</h1>
         </div>
-        <div className='swipe-bar'>
-            <p><box-icon name='x-circle' onClick={removeProfile} animation='tada-hover'></box-icon></p>
-            <p><box-icon name='check-circle' onClick={matchProfile} animation='tada-hover'></box-icon></p>
+        <div className='profile-card'>
+          <h2 className='name-tag'>{users[currentIndex].name}</h2>
+          <div className='tags'>
+              <p className='tag'>{users[currentIndex].school}</p>
+              <p className='tag'>${users[currentIndex].budget}</p>
+              <p className='tag'>{users[currentIndex].residencyType}</p>
+              <p className='tag'>{users[currentIndex].lifestyle}</p>
+          </div>
+          <div className='swipe-bar'>
+              <p><box-icon name='x-circle' onClick={removeProfile} animation='tada-hover'></box-icon></p>
+              <p><box-icon name='check-circle' onClick={matchProfile} animation='tada-hover'></box-icon></p>
+          </div>
         </div>
       </div>
+      <BottomNavbar />
     </div>
   )
 }

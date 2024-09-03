@@ -1,0 +1,22 @@
+.bottom-wrapper {
+    left: 20%;
+    width: 60%;
+    height: 5rem;
+    bottom: 0;
+    border: 2px solid #2A2D34;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #80C2AF;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+.bottom-wrapper div {
+    display: flex;
+    padding: 0 3rem;
+    align-items: center;
+    justify-content: center;
+}
