@@ -19,11 +19,11 @@ function Chat() {
               {chat.message}
             </div>
         ))}
-        <div className='send-bar'>
+      </div>
+      <div className='send-bar'>
           <input placeholder='Message' className='new-message'></input>
           <p><box-icon type='solid' name='up-arrow-circle' onClick={refreshChats} className='send-button'></box-icon></p>
         </div>
-      </div>
       <BottomNavbar></BottomNavbar>
     </div>
   )
