@@ -1,13 +1,20 @@
 import './Chat.css';
-import getMatches from '../InMemoryData/Matches/Matches.jsx';
+import { getMatches, addMessage } from '../InMemoryData/Matches/Matches.jsx';
 import BottomNavbar from '../Shared/BottomNavbar/BottomNavbar';
+import { useState } from 'react';
 
 function Chat() {
-  const chats = getMatches(1);
+  const [chats, setChats] = useState(getMatches(1));
+  const [message, setMessage] = useState('');
 
   const refreshChats = () => {
-    console.log('clicked');
-    getMatches(1);
+    setChats(getMatches(1));
+  }
+
+  const sendMessage = () => {
+    addMessage(1, message);
+    setMessage('');
+    refreshChats();
   }
 
   return (
@@ -21,8 +28,8 @@ function Chat() {
         ))}
       </div>
       <div className='send-bar'>
-          <input placeholder='Message' className='new-message'></input>
-          <p><box-icon type='solid' name='up-arrow-circle' onClick={refreshChats} className='send-button'></box-icon></p>
+          <input placeholder='Message' className='new-message' value={message} onChange={e => setMessage(e.target.value)}></input>
+          <p><box-icon type='solid' name='up-arrow-circle' onClick={sendMessage} className='send-button'></box-icon></p>
         </div>
       <BottomNavbar></BottomNavbar>
     </div>

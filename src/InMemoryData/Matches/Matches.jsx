@@ -1,6 +1,6 @@
 import matches from "./MatchList"
 
-const getMatches = (userId) => {
+export const getMatches = (userId) => {
     let chats = [];
 
     matches.forEach(match => {
@@ -12,4 +12,14 @@ const getMatches = (userId) => {
     return chats;
 }
 
-export default getMatches;
+export const addMessage = (userId, message) => {
+    matches.forEach(match => {
+        if (match.receiver === userId) {
+            match.messages.push({
+                receiver: userId,
+                sender: userId,
+                message: message
+            })
+        }
+    })
+}
