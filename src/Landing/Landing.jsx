@@ -1,47 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Landing.css';
-import Login from '../Login/Login';
-
-const LandingPage = () => {
-  const [showLogin, setShowLogin] = useState(false);
-
-  const toggleLogin = () => {
-    setShowLogin(!showLogin);
-  };
 
   return (
-    <div className="landing-page">
-      <header className="header">
-        <h1 className="brand">Roomie</h1>
-        <button className="login-btn" onClick={toggleLogin}>Login</button>
+    <div className="landing-wrapper">
+      <header className="landing-header">
+        <h1>Welcome to RoommateFinder</h1>
       </header>
-      <main className="main-content">
-        <section className="hero-section">
-          <h2 className="hero-title">Find Your Perfect Roommate</h2>
-          <p className="hero-slogan">Discover compatible living partners with ease</p>
-          <button className="cta-btn">Get Started</button>
+      <main className="landing-main">
+        <section className="landing-hero">
+          <h2>Find Your Perfect Roommate</h2>
+          <p>Connect with compatible roommates based on your lifestyle, budget, and preferences.</p>
         </section>
-        <section className="features-section">
+        <section className="landing-features">
           <div className="feature-card">
-            <h3 className="feature-title">Smart Matching</h3>
-            <p className="feature-description">Our algorithm finds your ideal roommate</p>
+            <span className="feature-icon">🔍</span>
+            <h3>Discover</h3>
+            <p>Browse through potential roommates</p>
           </div>
           <div className="feature-card">
-            <h3 className="feature-title">Verified Profiles</h3>
-            <p className="feature-description">All users are verified for your safety</p>
+            <span className="feature-icon">💰</span>
+            <h3>Budget-Friendly</h3>
+            <p>Find matches within your price range</p>
           </div>
           <div className="feature-card">
-            <h3 className="feature-title">Easy Communication</h3>
-            <p className="feature-description">Chat with potential roommates in-app</p>
+            <span className="feature-icon">🏠</span>
+            <h3>Lifestyle Match</h3>
+            <p>Connect based on shared interests</p>
           </div>
         </section>
+        <Link to="/login" className="login-button">Login</Link>
       </main>
-      <footer className="footer">
-        <p>&copy; 2024 Roomie. All rights reserved.</p>
+      <footer className="landing-footer">
+        <p>&copy; 2024 RoommateFinder. All rights reserved.</p>
       </footer>
-      {showLogin && <Login onClose={toggleLogin} />}
     </div>
   );
-};
 
-export default LandingPage;
+export default Landing;

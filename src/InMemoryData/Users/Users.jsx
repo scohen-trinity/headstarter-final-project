@@ -13,12 +13,10 @@ class Users {
   validateUser(user) {
     // List of fields that every user must have
     const requiredFields = ['name', 'budget', 'school', 'lifestyle', 'residencyType'];
-    
     // Check if each required field exists in the user object
     for (let field of requiredFields) {
       if (!user[field]) throw new Error(`Missing required field: ${field}`);
     }
-    
     // Check if the budget is a number
     if (typeof user.budget !== 'number') throw new Error('Budget must be a number');
   }
@@ -56,7 +54,6 @@ class Users {
     const userIndex = this.users.findIndex(user => user.name === name);
     // If no user is found, throw an error
     if (userIndex === -1) throw new Error('User not found');
-    
     // Create a new user object by combining the old data with the updated info
     const updatedUser = { ...this.users[userIndex], ...updatedInfo };
     // Check if the updated user data is valid
