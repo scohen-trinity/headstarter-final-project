@@ -7,23 +7,26 @@ import Landing from './Landing/Landing.jsx';
 import Profile from './Profile/Profile.jsx';
 import './App.css';
 
+
 const PrivateRoute = ({ children }) => {
-  const isAuthenticated = localStorage.getItem("currentUser") !== null;
-  return isAuthenticated ? children : <Navigate to="/login" />;
+ const isAuthenticated = localStorage.getItem("currentUser") !== null;
+ return isAuthenticated ? children : <Navigate to="/login" />;
 };
 
+
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/home' element={<PrivateRoute><Home /></PrivateRoute>} />
-        <Route path='/chat' element={<PrivateRoute><Chat /></PrivateRoute>} />
-        <Route path='/profile/:username' element={<PrivateRoute><Profile /></PrivateRoute>} />
-      </Routes>
-    </BrowserRouter>
-  );
+ return (
+   <BrowserRouter>
+     <Routes>
+       <Route path='/' element={<Landing />} />
+       <Route path='/login' element={<Login />} />
+       <Route path='/home' element={<PrivateRoute><Home /></PrivateRoute>} />
+       <Route path='/chat' element={<PrivateRoute><Chat /></PrivateRoute>} />
+       <Route path='/profile/:username' element={<PrivateRoute><Profile /></PrivateRoute>} />
+     </Routes>
+   </BrowserRouter>
+ );
 }
+
 
 export default App;

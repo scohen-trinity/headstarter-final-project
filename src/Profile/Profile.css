@@ -7,18 +7,20 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
     color: #2A2D34; /* gunMetal */
-}
-
-.profile-details {
+ }
+ 
+ 
+ .profile-details {
     margin-bottom: 25px;
     padding: 20px;
     background-color: #80C2AF; /* cambridgeBlue */
     border-radius: 10px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
     color: #2A2D34; /* gunMetal */
-}
-
-.logout-button {
+ }
+ 
+ 
+ .logout-button {
     background-color: #30C5FF; /* deepSkyBlue */
     color: #2A2D34; /* gunMetal */
     border: none;
@@ -28,27 +30,32 @@
     font-size: 18px;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin-top: 20px;
-}
-
-.logout-button:hover {
+ }
+ 
+ 
+ .logout-button:hover {
     background-color: #5C946E; /* seaGreen */
     transform: translateY(-2px);
-}
-
-.logout-button:focus {
+ }
+ 
+ 
+ .logout-button:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(92, 148, 110, 0.5); /* seaGreen */
-}
-
-h1 {
+ }
+ 
+ 
+ h1 {
     margin-bottom: 30px;
     font-size: 28px;
     color: #2A2D34; /* gunMetal */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-p {
+ }
+ 
+ 
+ p {
     margin: 10px 0;
     font-size: 18px;
     color: #2A2D34; /* gunMetal */
-}
+ }
+ 
